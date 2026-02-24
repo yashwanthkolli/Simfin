@@ -1,16 +1,133 @@
-# React + Vite
+# SimFin -- Finance & Accounting Firm Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, high-performance, fully responsive website built for a finance
+and accounting firm using React + Vite.
 
-Currently, two official plugins are available:
+This project focuses on: - Clean architecture - Accessibility - SEO
+optimization - Performance optimization - Production-grade animations -
+Strict Content Security Policy - Responsive design across all devices
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+------------------------------------------------------------------------
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+-   React 18
+-   Vite
+-   SCSS (Modular Architecture)
+-   GSAP (Animations)
+-   React Router
+-   Lucide Icons
+-   Netlify (Deployment)
 
-## Expanding the ESLint configuration
+------------------------------------------------------------------------
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+simfin/ │ ├── public/ │ ├── images/ │ ├── icons/ │ ├── sitemap.xml │ ├──
+robots.txt │ ├── src/ │ ├── animations/ │ ├── components/ │ ├── context/
+│ ├── pages/ │ ├── styles/ │ ├── App.jsx │ ├── main.jsx │ ├──
+netlify.toml ├── vite.config.js ├── package.json └── README.md
+
+------------------------------------------------------------------------
+
+## Key Features
+
+### Design & UX
+
+-   Fully responsive (mobile → 4K screens)
+-   Modern glassmorphism UI
+-   Dialog-based resource viewer
+-   Accessible forms
+-   Smooth scrolling behavior
+
+### Animation System
+
+-   GSAP-powered animations
+-   Scroll-triggered reveal system
+-   Parallax landing section
+-   Reduced motion support
+-   Animation stability across route changes
+
+### Accessibility
+
+-   Semantic HTML
+-   Proper ARIA attributes
+-   Focus states
+-   Keyboard navigation
+-   Screen-reader friendly structure
+
+### SEO Optimization
+
+-   Page-level meta tags
+-   Open Graph tags
+-   Canonical URLs
+-   Sitemap.xml
+-   Robots.txt
+-   Structured data support
+
+------------------------------------------------------------------------
+
+## Installation
+
+Clone repository:
+
+git clone `<repo-url>`{=html} cd simfin
+
+Install dependencies:
+
+npm install
+
+------------------------------------------------------------------------
+
+## Development
+
+npm run dev
+
+------------------------------------------------------------------------
+
+## Production Build
+
+npm run build
+
+Preview locally:
+
+npm run preview
+
+------------------------------------------------------------------------
+
+## Deployment (Netlify)
+
+Recommended (Git-based deployment):
+
+1.  Push project to GitHub.
+2.  Connect repository in Netlify.
+3.  Set:
+    -   Build command: npm run build
+    -   Publish directory: dist
+
+Netlify reads netlify.toml automatically.
+
+------------------------------------------------------------------------
+
+## Performance Optimizations
+
+-   Code splitting
+-   Asset compression
+-   Optimized images
+-   Lazy loading
+-   Minified build
+
+------------------------------------------------------------------------
+
+## Future Improvements
+
+-   Form backend integration
+-   Analytics integration
+-   CMS integration
+-   Multi-language support
+
+------------------------------------------------------------------------
+
+## License
+
+Private project -- All rights reserved.
