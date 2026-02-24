@@ -5,6 +5,12 @@ import AboutImage from '@assets/images/about.jpg';
 import VinodJPG from '@assets/images/team/vinod.jpg';
 import VinodWebP from '@assets/images/team/vinod.webp';
 import VinodAVIF from '@assets/images/team/vinod.avif';
+import SharadJPG from '@assets/images/team/sharad.jpg';
+import SharadWebP from '@assets/images/team/sharad.webp';
+import SharadAVIF from '@assets/images/team/sharad.avif';
+import KushalJPG from '@assets/images/team/kushal.jpg';
+import KushalWebP from '@assets/images/team/kushal.webp';
+import KushalAVIF from '@assets/images/team/kushal.avif';
 
 const TeamSection = () => {
   const headingRef = useReveal(fadeInUp, { delay: 0 })
@@ -32,16 +38,16 @@ const TeamSection = () => {
               />
               <img
                 src={VinodJPG}
-                alt="Robert Chen"
+                alt="Vinod Bagade"
               />
             </picture>
           </div>
           <div className='overlay'>
             <h3 className='name'>Vinod Bagade</h3>
-            <p className='role'>Snehit's Uncle</p>
+            <p className='role'>Consultant</p>
           </div>
           <div className='hover-overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>Vinod Bagade</h3>
             <p className='role'>Consultant</p>
             <div className='info'>
               <p className='property'>EXPERIENCE</p>
@@ -49,18 +55,33 @@ const TeamSection = () => {
             </div>
             <div className='info'>
               <p className='property'>Core Competencies</p>
-              <p className='value'>M&A, Capital Structuring, Financial Modeling</p>
+              <p className='value'>• Financial strategy and Virtual CFO advisory<br />• Capital market and MSME IPO advisory<br />• Due diligence and transaction support<br />• Tax planning and business structuring</p>
             </div>
           </div>
         </article>
         <article className='member-card reveal' ref={card2Ref}>
-          <div className='image-container'><img src={AboutImage} alt='Robert Chen' /></div>
+          <div className='image-container'>
+            <picture>
+              <source
+                srcSet={SharadAVIF}
+                type="image/avif"
+              />
+              <source
+                srcSet={SharadWebP}
+                type="image/webp"
+              />
+              <img
+                src={SharadJPG}
+                alt="K J Sharad"
+              />
+            </picture>
+          </div>
           <div className='overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>K J Sharad</h3>
             <p className='role'>Consultant</p>
           </div>
           <div className='hover-overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>K J Sharad</h3>
             <p className='role'>Consultant</p>
             <div className='info'>
               <p className='property'>EXPERIENCE</p>
@@ -68,45 +89,60 @@ const TeamSection = () => {
             </div>
             <div className='info'>
               <p className='property'>Core Competencies</p>
-              <p className='value'>M&A, Capital Structuring, Financial Modeling</p>
+              <p className='value'>• Audit and assurance services<br />• Direct and indirect tax litigation<br />• Startup advisory and business structuring<br />• GAAP convergence and due diligence reviews</p>
             </div>
           </div>
         </article>
         <article className='member-card reveal' ref={card3Ref}>
-          <div className='image-container'><img src={AboutImage} alt='Robert Chen' /></div>
+          <div className='image-container'>
+            <picture>
+              <source
+                srcSet={KushalAVIF}
+                type="image/avif"
+              />
+              <source
+                srcSet={KushalWebP}
+                type="image/webp"
+              />
+              <img
+                src={KushalJPG}
+                alt="Kushal  M V"
+              />
+            </picture>
+          </div>
           <div className='overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>Kushal  M V</h3>
             <p className='role'>Consultant</p>
           </div>
           <div className='hover-overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>Kushal  M V</h3>
             <p className='role'>Consultant</p>
             <div className='info'>
               <p className='property'>EXPERIENCE</p>
-              <p className='value'>20+ Years</p>
+              <p className='value'>7+ Years</p>
             </div>
             <div className='info'>
               <p className='property'>Core Competencies</p>
-              <p className='value'>M&A, Capital Structuring, Financial Modeling</p>
+              <p className='value'>• Accounting systems and process reviews<br />• Business process and internal control assessments<br />• Inventory control reviews<br />• Quality review and compliance oversight</p>
             </div>
           </div>
         </article>
         <article className='member-card reveal' ref={card4Ref}>
           <div className='image-container'><img src={AboutImage} alt='Robert Chen' /></div>
           <div className='overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>Shivakumara  G V</h3>
             <p className='role'>Consultant</p>
           </div>
           <div className='hover-overlay'>
-            <h3 className='name'>Robert Chen</h3>
+            <h3 className='name'>Shivakumara  G V</h3>
             <p className='role'>Consultant</p>
             <div className='info'>
               <p className='property'>EXPERIENCE</p>
-              <p className='value'>20+ Years</p>
+              <p className='value'>12+ Years</p>
             </div>
             <div className='info'>
               <p className='property'>Core Competencies</p>
-              <p className='value'>M&A, Capital Structuring, Financial Modeling</p>
+              <p className='value'>• Indirect tax advisory (GST and Customs)<br />• Transfer pricing support<br />• Tax strategy alignment and compliance<br />• Regulatory and operational oversight</p>
             </div>
           </div>
         </article>

@@ -5,7 +5,7 @@ import LinkedInIcon from '@assets/icons/linkedin.svg';
 import MailIcon from '@assets/icons/mail.svg';
 import LocationIcon from '@assets/icons/location.svg';
 import PhoneIcon from '@assets/icons/phone.svg';
-import SimFinLogo from '@assets/images/logo.png';
+import SimFinLogo from '@assets/images/logo_white.png';
 import './Footer.styles.scss'
 import { ChevronRight } from 'lucide-react';
 

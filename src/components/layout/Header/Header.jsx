@@ -1,6 +1,7 @@
 import { NavLink, useLocation } from 'react-router-dom'
 import { useHeaderTheme } from '@/context/HeaderThemeContext'
-import SimFinLogo from '@assets/images/logo.png'
+import SimFinLogoDark from '@assets/images/logo_dark.png'
+import SimFinLogoLight from '@assets/images/logo_white.png'
 import { Menu, X } from 'lucide-react'
 import gsap from 'gsap'
 import './Header.styles.scss'
@@ -59,7 +60,7 @@ const Header = () => {
     >
       <div className="container site-header__inner">
         <NavLink to="/" className="site-header__logo">
-          <img src={SimFinLogo} alt="SimFin logo" />
+          <img src={theme === 'dark' ? SimFinLogoDark : SimFinLogoLight} alt="SimFin logo" />
         </NavLink>
 
         {/* Desktop Nav (unchanged) */}

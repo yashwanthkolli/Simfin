@@ -88,7 +88,7 @@ const ContactForm = () => {
           <div className='row'>
             <div className='input-container'>
               <label className='label' htmlFor='service'>Interest</label>
-              <select style={{color: formData.service ? 'white' : 'gray'}} name='service' value={formData.service} onChange={handleChange} id='service' className='input'>
+              <select style={{color: formData.service ? 'inherit' : '#677486'}} name='service' value={formData.service} onChange={handleChange} id='service' className='input'>
                 <option value="" disabled hidden>Select Service</option>
                 <option value="Business Advisory">Business Advisory</option>
                 <option value="Audit and Assurance">Audit and Assurance</option>

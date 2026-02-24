@@ -168,7 +168,7 @@ const LandingSection = () => {
           <div ref={kpi1Ref} className='kpi kpi-1'>
             <div className='kpi-increment'>
               <img className='icon' src={IncrementIcon} alt='increment' />
-              <span className='kpi-number'>3000</span>
+              <span className='kpi-number'>3000+</span>
             </div>
             <div className='kpi-title'>Clients Served</div>
           </div>
