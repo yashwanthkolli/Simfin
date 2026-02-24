@@ -21,15 +21,6 @@ Strict Content Security Policy - Responsive design across all devices
 
 ------------------------------------------------------------------------
 
-## Project Structure
-
-simfin/ │ ├── public/ │ ├── images/ │ ├── icons/ │ ├── sitemap.xml │ ├──
-robots.txt │ ├── src/ │ ├── animations/ │ ├── components/ │ ├── context/
-│ ├── pages/ │ ├── styles/ │ ├── App.jsx │ ├── main.jsx │ ├──
-netlify.toml ├── vite.config.js ├── package.json └── README.md
-
-------------------------------------------------------------------------
-
 ## Key Features
 
 ### Design & UX
