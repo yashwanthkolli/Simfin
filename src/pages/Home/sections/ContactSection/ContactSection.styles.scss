@@ -1,0 +1,95 @@
+.contact-section {
+  @include section;
+  background-image: linear-gradient(to bottom, #0f172b 0%, #1d293d 100%);
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+
+  /* ============================= */
+  /* TABLET: STACK */
+  /* ============================= */
+
+  @include respond(tablet) {
+    flex-direction: column;
+    gap: 60px;
+  }
+
+  /* ============================= */
+  /* MOBILE */
+  /* ============================= */
+
+  @include respond(mobile) {
+    gap: 40px;
+  }
+
+  /* ============================= */
+  /* CONTENT */
+  /* ============================= */
+
+  .content-container {
+    width: 45%;
+    text-align: center;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+
+    .section-sub-title {
+      margin-bottom: $spacing-md;
+
+      @include respond(tablet) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .heading {
+      text-align: left;
+      margin-bottom: $spacing-md;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+    }
+
+    .sub-heading {
+      text-align: left;
+      margin-bottom: $spacing-xxl;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+
+      @include respond(mobile) {
+        font-size: 16px;
+      }
+    }
+
+    .list {
+      margin-left: 24px;
+      text-align: left;
+
+      @include respond(tablet) {
+        margin-left: 0;
+        text-align: center;
+        list-style-position: inside;
+      }
+
+      li {
+        padding: 8px 12px;
+        font-size: 18px;
+
+        @include respond(mobile) {
+          font-size: 16px;
+          padding: 6px 0;
+        }
+      }
+
+      li::marker {
+        color: $color-accent;
+      }
+    }
+  }
+}

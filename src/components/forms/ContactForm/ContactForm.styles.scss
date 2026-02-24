@@ -1,0 +1,54 @@
+.contact-form-container {
+  position: relative;
+  width: 45%;
+  @include glassmorphism;
+  border-radius: $radius-lg;
+  background: rgba($color-white, 0.05);
+  padding: 32px;
+  box-sizing: border-box;
+
+  &::before {
+    display: none;
+  }
+
+  /* ============================= */
+  /* TABLET: FULL WIDTH */
+  /* ============================= */
+
+  @include respond(tablet) {
+    width: 100%;
+  }
+
+  /* ============================= */
+  /* MOBILE */
+  /* ============================= */
+
+  @include respond(mobile) {
+    padding: 24px;
+  }
+
+  .form-data {
+    width: 100%;
+
+    .row {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 24px;
+
+      /* ============================= */
+      /* TABLET: STACK INPUTS */
+      /* ============================= */
+
+      @include respond(tablet) {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      option {
+        color: $color-primary;
+      }
+    }
+  }
+}

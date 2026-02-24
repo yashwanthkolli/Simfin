@@ -1,0 +1,136 @@
+.values-section {
+  @include section;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 80px;
+
+  /* ============================= */
+  /* TABLET: STACK */
+  /* ============================= */
+
+  @include respond(tablet) {
+    flex-direction: column;
+    gap: 60px;
+    text-align: center;
+  }
+
+  @include respond(mobile) {
+    gap: 40px;
+  }
+
+  /* ============================= */
+  /* IMAGE */
+  /* ============================= */
+
+  .image-container {
+    width: 40%;
+    overflow: hidden;
+    border-radius: $radius-lg;
+
+    @include respond(tablet) {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+
+  /* ============================= */
+  /* CONTENT */
+  /* ============================= */
+
+  .content {
+    width: 50%;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+
+    .heading {
+      text-align: left;
+      margin-bottom: $spacing-xl;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+    }
+
+    .value-card {
+      display: flex;
+      gap: $spacing-md;
+      align-items: flex-start;
+      padding: 16px;
+      margin-bottom: $spacing-sm;
+      border-radius: $radius-md;
+      transition: all 0.3s ease;
+
+      @include respond(tablet) {
+        justify-content: center;
+        text-align: left;
+      }
+
+      @include respond(mobile) {
+        padding: 14px;
+      }
+
+      &:hover {
+        transform: translateX(4px);
+        box-shadow:
+          0 12px 32px rgba(0, 0, 0, 0.28),
+          0 2px 6px rgba(0, 0, 0, 0.2),
+          inset 3px 3px 0 -2px rgba(255, 255, 255, 0.2),
+          inset -3px -3px 0 -2.7px rgba(255, 255, 255, 0.2);
+      }
+
+      /* Disable hover movement on touch devices */
+      @media (hover: none) {
+        &:hover {
+          transform: none;
+        }
+      }
+
+      .point {
+        width: 8px;
+        height: 48px;
+        background-color: $color-accent;
+        border-radius: $radius-sm;
+
+        @include respond(mobile) {
+          height: 36px;
+        }
+      }
+
+      .value {
+        width: calc(100% - $spacing-md - 8px);
+
+        .value-heading {
+          font-size: 24px;
+          line-height: 28px;
+          margin-bottom: $spacing-sm;
+
+          @include respond(mobile) {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+
+        .value-text {
+          font-size: 18px;
+          line-height: 24px;
+          color: $color-gray-600;
+
+          @include respond(mobile) {
+            font-size: 15px;
+            line-height: 22px;
+          }
+        }
+      }
+    }
+  }
+}

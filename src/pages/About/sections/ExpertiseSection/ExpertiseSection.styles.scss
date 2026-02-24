@@ -1,0 +1,65 @@
+.expertise-section {
+  @include section;
+  background: $color-primary;
+  color: $color-white;
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .sub-heading {
+    margin-bottom: $spacing-xl;
+
+    @include respond(mobile) {
+      font-size: 16px;
+    }
+  }
+
+  .expertise-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+    justify-content: center;
+
+    @include respond(tablet) {
+      gap: $spacing-sm;
+    }
+
+    @include respond(mobile) {
+      gap: 10px;
+    }
+
+    .expertise {
+      padding: 12px 24px;
+      border-radius: $radius-lg;
+      background: rgba($color-white, 0.2);
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 400;
+      transition: all 0.25s ease;
+      white-space: nowrap;
+      list-style-type: none;
+
+      &:hover {
+        background: rgba($color-white, 0.35);
+      }
+
+      /* ============================= */
+      /* TABLET */
+      /* ============================= */
+
+      @include respond(tablet) {
+        padding: 10px 20px;
+      }
+
+      /* ============================= */
+      /* MOBILE */
+      /* ============================= */
+
+      @include respond(mobile) {
+        padding: 8px 16px;
+        font-size: 14px;
+      }
+    }
+  }
+}

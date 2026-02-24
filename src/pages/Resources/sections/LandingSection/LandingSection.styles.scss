@@ -1,0 +1,38 @@
+.resources-landing-section {
+  @include section;
+  background: $color-primary;
+  color: $color-white;
+  text-align: center;
+
+  .section-sub-title {
+    margin: auto;
+    margin-top: $header-height;
+    margin-bottom: $spacing-md;
+
+    @include respond(tablet) {
+      margin-top: calc(#{$header-height} - 20px);
+    }
+
+    @include respond(mobile) {
+      margin-top: calc(#{$header-height} - 30px);
+    }
+  }
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .sub-heading {
+    width: 60%;
+    margin: auto;
+
+    @include respond(tablet) {
+      width: 80%;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+}

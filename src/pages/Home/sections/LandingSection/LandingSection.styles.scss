@@ -1,0 +1,248 @@
+.landing-section {
+  @include flex-center;
+  position: relative;
+  gap: $spacing-lg;
+  width: 100%;
+  height: 100vh; 
+  background: linear-gradient(#07182DE1, #07182DE1);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  background-attachment: scroll;
+  color: $color-white;
+  padding: 0 10%;
+  padding-top: $header-height;
+  box-sizing: border-box;
+
+  /* ============================= */
+  /* LAPTOP */
+  /* ============================= */
+
+  @include respond(laptop) {
+    gap: $spacing-xl;
+  }
+
+  /* ============================= */
+  /* TABLET */
+  /* ============================= */
+
+  @include respond(tablet) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 32px 60px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* ============================= */
+  /* MOBILE */
+  /* ============================= */
+
+  @include respond(mobile) {
+    padding: 80px 20px 60px;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+
+  /* ============================= */
+  /* CONTENT */
+  /* ============================= */
+
+  .content-container {
+    width: 60%;
+
+    @include respond(tablet) {
+      width: 100%;
+      text-align: center;
+    }
+
+    .tag {
+      @include glassmorphism;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 10px 20px;
+      margin-bottom: $spacing-lg;
+      border-radius: $radius-lg;
+      background: rgba($color-accent, 0.2);
+
+      @include respond(tablet) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      img {
+        width: 24px;
+        height: 24px;
+
+        @include respond(mobile) {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+
+    .heading {
+      text-align: left;
+      margin-bottom: $spacing-xl;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+    }
+
+    .sub-heading {
+      width: 80%;
+      text-align: left;
+      margin-bottom: $spacing-xxl;
+
+      @include respond(tablet) {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: $spacing-lg;
+
+      @include respond(tablet) {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+
+      @include respond(mobile) {
+        flex-direction: column;
+        gap: $spacing-md;
+      }
+    }
+  }
+
+  /* ============================= */
+  /* IMAGE SECTION */
+  /* ============================= */
+
+  .image-section {
+    position: relative;
+    width: 40%;
+    height: 65%;
+
+    @include respond(tablet) {
+      width: 100%;
+      height: 400px;
+      margin-top: 40px;
+    }
+
+    @include respond(mobile) {
+      height: 300px;
+    }
+
+    .image-container {
+      position: absolute;
+      width: 90%;
+      height: 100%;
+      border-radius: $radius-md;
+      overflow: hidden;
+      will-change: transform;
+
+      picture, img {
+        width: 100%;
+        height: 100%;
+        display: block;
+        object-fit: cover;
+      }
+
+      .image-overlay {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(#0000007B, #0000007B);
+        pointer-events: none;
+      }
+
+      @include respond(tablet) {
+        width: 100%;
+      }
+    }
+
+    .glass-container {
+      position: absolute;
+      top: -30px;
+      left: 20px;
+      width: 90%;
+      height: 100%;
+      border-radius: $radius-lg;
+
+      @include glassmorphism;
+
+      @include respond(tablet) {
+        left: 0;
+        top: 0;
+        width: 100%;
+      }
+
+      .kpi {
+        position: absolute;
+        width: fit-content;
+        @include flex-center;
+        flex-direction: column;
+        padding: 16px;
+        border: 1px solid $color-gray-300;
+        background-color: rgba($color-primary, 0.64);
+
+        @include respond(mobile) {
+          padding: 12px;
+        }
+
+        .kpi-increment {
+          display: flex;
+          gap: $spacing-sm;
+
+          img {
+            width: 16px;
+            height: auto;
+          }
+
+          .kpi-number {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 150%;
+
+            @include respond(mobile) {
+              font-size: 28px;
+            }
+          }
+        }
+      }
+
+      .kpi-1 {
+        top: 40px;
+        right: 30px;
+
+        @include respond(mobile) {
+          top: 20px;
+          right: 20px;
+        }
+      }
+
+      .kpi-2 {
+        bottom: 40px;
+        left: 30px;
+
+        @include respond(mobile) {
+          bottom: 20px;
+          left: 20px;
+        }
+      }
+    }
+  }
+}

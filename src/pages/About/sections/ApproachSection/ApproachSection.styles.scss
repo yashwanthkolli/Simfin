@@ -1,0 +1,105 @@
+.approach-section {
+  @include section;
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .sub-heading {
+    width: 70%;
+    margin: auto;
+    margin-bottom: $spacing-xl;
+
+    @include respond(tablet) {
+      width: 85%;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+    }
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: $spacing-md;
+
+    @include respond(tablet) {
+      justify-content: center;
+      gap: $spacing-lg;
+    }
+
+    .approach-card {
+      width: calc(25% - #{$spacing-lg} / 2);
+      padding: 24px 30px;
+      display: flex;
+      flex-direction: column;
+      border-radius: $radius-lg;
+      font-family: $font-primary;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background: $color-gray-300;
+      }
+
+      /* ============================= */
+      /* TABLET: 2 PER ROW */
+      /* ============================= */
+
+      @include respond(tablet) {
+        width: calc(50% - #{$spacing-lg} / 2);
+      }
+
+      @include respond(mobile) {
+        padding: 20px;
+      }
+
+      .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: $radius-md;
+        @include flex-center;
+        margin-bottom: $spacing-md;
+        background-color: rgba($color-accent, 0.2);
+
+        @include respond(mobile) {
+          width: 44px;
+          height: 44px;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+
+          @include respond(mobile) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .card-heading {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 25px;
+        margin-bottom: $spacing-sm;
+
+        @include respond(mobile) {
+          font-size: 18px;
+        }
+      }
+
+      .card-text {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 25px;
+
+        @include respond(mobile) {
+          font-size: 15px;
+          line-height: 22px;
+        }
+      }
+    }
+  }
+}

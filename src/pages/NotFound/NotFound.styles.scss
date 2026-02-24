@@ -1,0 +1,31 @@
+.not-found-img {
+  width: 500px;
+  max-width: 90%;
+  margin: 0 auto;
+  padding-top: 22vh;
+  margin-bottom: 40px;
+
+  @include respond(tablet) {
+    width: 400px;
+    padding-top: 18vh;
+  }
+
+  @include respond(mobile) {
+    width: 280px;
+    padding-top: 14vh;
+    margin-bottom: 24px;
+  }
+}
+
+.not-found-heading {
+  padding-bottom: 22vh;
+  text-align: center;
+
+  @include respond(tablet) {
+    padding-bottom: 18vh;
+  }
+
+  @include respond(mobile) {
+    padding-bottom: 14vh;
+  }
+}

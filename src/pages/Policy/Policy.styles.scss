@@ -1,0 +1,24 @@
+.policy-page {
+  @include section;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.04em;
+
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .last-updated {
+    margin-bottom: 52px;
+  }
+
+  ul {
+    margin-left: 20px;
+  }
+
+  ul li::marker {
+    font-size: 10px; 
+  }
+}

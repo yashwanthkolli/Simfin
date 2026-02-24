@@ -1,0 +1,95 @@
+.aboutus-landing-section {
+  @include section;
+  background-image: linear-gradient(
+    to right bottom,
+    #0f172b 0%,
+    #1d293d 50%,
+    #1c398e 100%
+  );
+  color: $color-white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  gap: 80px;
+
+  /* ============================= */
+  /* TABLET: STACK */
+  /* ============================= */
+
+  @include respond(tablet) {
+    flex-direction: column;
+    text-align: center;
+    min-height: auto;
+    padding-top: 120px;
+    gap: 60px;
+  }
+
+  @include respond(mobile) {
+    gap: 40px;
+  }
+
+  /* ============================= */
+  /* CONTENT */
+  /* ============================= */
+
+  .content {
+    width: 40%;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+
+    .section-sub-title,
+    .heading,
+    .sub-heading {
+      margin-bottom: $spacing-md;
+    }
+
+    .section-sub-title {
+      @include respond(tablet) {
+        margin: auto;
+        margin-bottom: $spacing-sm;
+      }
+    }
+
+    .heading {
+      text-align: left;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+    }
+
+    .sub-heading {
+      text-align: left;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+
+      @include respond(mobile) {
+        font-size: 16px;
+      }
+    }
+  }
+
+  /* ============================= */
+  /* IMAGE */
+  /* ============================= */
+
+  .image-container {
+    width: 50%;
+
+    @include respond(tablet) {
+      width: 100%;
+      max-width: 600px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: $radius-lg;
+    }
+  }
+}

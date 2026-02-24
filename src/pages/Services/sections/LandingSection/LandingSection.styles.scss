@@ -1,0 +1,20 @@
+.service-landing-section {
+  @include section;
+  background: $color-primary;
+  color: $color-white;
+
+  .section-sub-title {
+    margin: auto;
+    margin-top: $header-height;
+    margin-bottom: $spacing-md;
+  }
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .sub-heading {
+    width: 60%;
+    margin: auto;
+  }
+}

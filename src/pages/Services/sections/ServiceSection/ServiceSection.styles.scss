@@ -1,0 +1,150 @@
+.service-service-section {
+  @include section;
+
+  .service-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 48px;
+    }
+  }
+
+  .service-container.reverse {
+    flex-direction: row-reverse;
+
+    @include respond(tablet) {
+      flex-direction: column;
+    }
+  }
+
+  /* ============================= */
+  /* IMAGE */
+  /* ============================= */
+
+  .service-image {
+    flex: 1;
+
+    @include respond(tablet) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+      border-radius: $radius-lg;
+      object-fit: cover;
+
+      @include respond(tablet) {
+        max-height: 420px;
+      }
+
+      @include respond(mobile) {
+        max-height: 320px;
+      }
+    }
+  }
+
+  /* ============================= */
+  /* CONTENT */
+  /* ============================= */
+
+  .service-content {
+    flex: 1;
+
+    @include respond(tablet) {
+      width: 100%;
+      text-align: center;
+    }
+  }
+
+  .service-icon {
+    width: 56px;
+    height: 56px;
+    background: $color-accent;
+    margin-bottom: 24px;
+    color: $color-white;
+    @include flex-center;
+    border-radius: $radius-md;
+
+    @include respond(tablet) {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    img {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
+  .heading,
+  .sub-heading {
+    margin-bottom: $spacing-md;
+    text-align: left;
+
+    @include respond(tablet) {
+      text-align: center;
+    }
+  }
+
+  .sub-heading {
+    color: $color-gray-600;
+
+    @include respond(mobile) {
+      font-size: 16px;
+    }
+  }
+
+  .service-description {
+    margin-bottom: 24px;
+    line-height: 1.8;
+
+    @include respond(tablet) {
+      text-align: center;
+    }
+  }
+
+  /* ============================= */
+  /* POINTS */
+  /* ============================= */
+
+  .service-points {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    @include respond(tablet) {
+      justify-content: center;
+    }
+
+    .point {
+      width: 48%;
+      display: flex;
+      gap: $spacing-md;
+      align-items: center;
+      margin-bottom: $spacing-md;
+      font-size: 18px;
+
+      @include respond(tablet) {
+        width: 100%;
+        justify-content: center;
+      }
+
+      @include respond(mobile) {
+        font-size: 16px;
+      }
+
+      .check {
+        width: 24px;
+        height: 24px;
+        background: rgba($color-accent, 0.1);
+        @include flex-center;
+        border-radius: 50%;
+      }
+    }
+  }
+}

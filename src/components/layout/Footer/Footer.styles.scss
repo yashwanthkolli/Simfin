@@ -1,0 +1,184 @@
+.site-footer {
+  @include section;
+  padding-bottom: 48px;
+  background: $color-primary;
+  color: $color-white;
+
+  /* ============================= */
+  /* INNER */
+  /* ============================= */
+
+  &__inner {
+    border-bottom: 1px solid $color-white;
+    padding-bottom: 80px;
+
+    @include respond(mobile) {
+      padding-bottom: 48px;
+    }
+
+    .logo {
+      width: 150px;
+      margin-bottom: $spacing-md;
+
+      img {
+        width: 100%;
+      }
+
+      @include respond(tablet) {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    .info {
+      margin-bottom: $spacing-md;
+      color: $color-gray-600;
+
+      @include respond(tablet) {
+        text-align: center;
+      }
+    }
+
+    /* ============================= */
+    /* SOCIAL ICONS */
+    /* ============================= */
+
+    .socials-container {
+      display: flex;
+
+      @include respond(tablet) {
+        justify-content: center;
+      }
+
+      .icon-container {
+        width: 40px;
+        height: 40px;
+        margin-right: 24px;
+        @include flex-center;
+        background-color: rgba($color-white, 0.2);
+        border-radius: $radius-md;
+        transition: all 0.3s ease;
+
+        &:hover {
+          transform: scale(1.1);
+          background-color: $color-accent;
+        }
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+
+    /* ============================= */
+    /* SITE LINKS */
+    /* ============================= */
+
+    .site-links {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      margin-top: $spacing-xxl;
+
+      @include respond(tablet) {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: $spacing-xl;
+      }
+
+      @include respond(mobile) {
+        gap: $spacing-lg;
+      }
+
+      .links-list {
+        width: 18%;
+        list-style: none;
+
+        /* ============================= */
+        /* TABLET: 2 PER ROW */
+        /* ============================= */
+
+        @include respond(tablet) {
+          width: calc(50% - #{$spacing-xl} / 2);
+          text-align: center;
+        }
+
+        /* ============================= */
+        /* MOBILE: FULL WIDTH */
+        /* ============================= */
+
+        @include respond(mobile) {
+          width: 100%;
+        }
+
+        .list-heading {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 150%;
+          margin-bottom: $spacing-lg;
+
+          @include respond(tablet) {
+            margin-bottom: $spacing-sm;
+          }
+        }
+
+        .link {
+          display: flex;
+          align-items: center;
+          padding: 6px 0;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 150%;
+          color: $color-gray-600;
+
+          @include respond(tablet) {
+            justify-content: center;
+          }
+
+          img {
+            width: 36px;
+            height: 36px;
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  /* ============================= */
+  /* BOTTOM BAR */
+  /* ============================= */
+
+  &__bottom {
+    margin-top: $spacing-lg;
+    font-size: 16px;
+    color: $color-gray-600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: $spacing-md;
+      text-align: center;
+    }
+
+    .social-icons-container {
+      display: flex;
+
+      @include respond(tablet) {
+        justify-content: center;
+      }
+
+      .social-icon-link {
+        margin-left: $spacing-md;
+
+        @include respond(tablet) {
+          margin-left: $spacing-sm;
+          margin-right: $spacing-sm;
+        }
+      }
+    }
+  }
+}

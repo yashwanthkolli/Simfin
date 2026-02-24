@@ -1,0 +1,92 @@
+.page-skeleton {
+  width: 100%;
+  min-height: 100vh;
+  padding: 120px 10% 80px;
+  background: linear-gradient(#07182D, #07182D);
+  box-sizing: border-box;
+}
+
+/* Subtle animation — very soft */
+@keyframes softPulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.6; }
+}
+
+.skeleton-header {
+  height: 60px;
+  width: 40%;
+  margin-bottom: 60px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.06);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+.skeleton-content {
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 80px;
+}
+
+.skeleton-left {
+  flex: 1;
+}
+
+.skeleton-title {
+  height: 40px;
+  width: 80%;
+  margin-bottom: 24px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+.skeleton-line {
+  height: 16px;
+  width: 90%;
+  margin-bottom: 14px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+.skeleton-line.short {
+  width: 60%;
+}
+
+.skeleton-button {
+  height: 44px;
+  width: 160px;
+  margin-top: 20px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.08);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+.skeleton-right {
+  flex: 1;
+  height: 320px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+.skeleton-section-block {
+  height: 200px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  animation: softPulse 2s ease-in-out infinite;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .skeleton-content {
+    flex-direction: column;
+  }
+
+  .skeleton-right {
+    width: 100%;
+  }
+}

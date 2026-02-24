@@ -1,0 +1,90 @@
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin section {
+  padding: 128px 80px;
+
+  @include respond(ultra) {
+    padding: 160px 120px;
+  }
+
+  @include respond(laptop) {
+    padding: 80px 48px;
+  }
+
+  @include respond(tablet) {
+    padding: 72px 32px;
+  }
+
+  @include respond(mobile) {
+    padding: 60px 20px;
+  }
+}
+
+@mixin glassmorphism {
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  box-shadow:
+  0 12px 32px rgba(0, 0, 0, 0.28),
+  0 2px 6px rgba(0, 0, 0, 0.2),
+  inset 3px 3px 0 -2px rgba(255, 255, 255, 0.2),
+  inset -3px -3px 0 -2.7px rgba(255, 255, 255, 0.2);
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: inherit;
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    transform: scale(1.05);
+    opacity: 0.18;
+
+    /* EDGE MASK */
+    mask-image: radial-gradient(
+      ellipse at center,
+      transparent 65%,
+      black 100%
+    );
+    -webkit-mask-image: radial-gradient(
+      ellipse at center,
+      transparent 65%,
+      black 100%
+    );
+
+    pointer-events: none;
+  }
+}
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == ultra {
+    @media (min-width: 1920px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 950px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media (max-width: 480px) {
+      @content;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+.clients-section {
+  @include section;
+  background-image: linear-gradient(to bottom, #1d293d 10%, #0f172b 80%);
+  color: $color-white;
+
+  .section-sub-title,
+  .heading {
+    margin: auto;
+    margin-bottom: $spacing-md;
+  }
+  
+  .content {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .clients-list {
+      width: 100%;
+      margin-top: 30px;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .desktop-view {
+      display: block;
+
+      @include respond(mobile) {
+        display: none;
+      }
+    }
+
+    .mobile-view {
+      display: none;
+
+      @include respond(mobile) {
+        display: block;
+      }
+    }
+  }
+}

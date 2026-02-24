@@ -1,0 +1,112 @@
+.work-section {
+  @include section;
+  background-image: linear-gradient(
+    to right bottom,
+    oklch(0.279 0.041 260.031) 0%,
+    oklch(0.208 0.042 265.755) 50%,
+    oklch(0.379 0.146 265.522) 100%
+  );
+  color: $color-white;
+
+  .section-sub-title {
+    margin: auto;
+    margin-bottom: $spacing-md;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; // important
+    gap: $spacing-xxl;
+    margin-top: $spacing-xl;
+    list-style-type: none;
+
+    @include respond(tablet) {
+      gap: $spacing-xl;
+    }
+
+    @include respond(mobile) {
+      gap: $spacing-lg;
+    }
+
+    .card {
+      backdrop-filter: blur(2px);
+      -webkit-backdrop-filter: blur(2px);
+      box-shadow:
+        0 12px 32px rgba(0, 0, 0, 0.28),
+        0 2px 6px rgba(0, 0, 0, 0.2),
+        inset 3px 3px 0 -2px rgba(255, 255, 255, 0.2),
+        inset -3px -3px 0 -2.7px rgba(255, 255, 255, 0.2);
+      border-radius: $radius-lg;
+      width: 20%; // desktop untouched
+      background: rgba($color-white, 0.1);
+      padding: 24px 32px;
+
+      &:hover:not(:disabled) {
+        background: rgba($color-white, 0.2);
+      }
+
+      /* ============================= */
+      /* TABLET: 2 CARDS PER ROW */
+      /* ============================= */
+
+      @include respond(tablet) {
+        width: calc(50% - #{$spacing-xl} / 2);
+      }
+
+      /* ============================= */
+      /* MOBILE: 1 CARD PER ROW */
+      /* ============================= */
+
+      @include respond(mobile) {
+        width: 100%;
+        padding: 20px;
+      }
+
+      .number {
+        font-weight: 700;
+        color: color-mix(in oklab, #51a2ff 20%, transparent);
+        font-size: 48px;
+        line-height: 125%;
+        margin-bottom: $spacing-sm;
+
+        @include respond(mobile) {
+          font-size: 36px;
+        }
+      }
+
+      .icon-container {
+        width: 50px;
+        height: 50px;
+        border-radius: $radius-md;
+        @include flex-center;
+        margin-bottom: $spacing-lg;
+        background-color: rgba($color-accent, 0.2);
+
+        @include respond(mobile) {
+          width: 44px;
+          height: 44px;
+        }
+
+        .icon {
+          width: 30px;
+          height: 30px;
+
+          @include respond(mobile) {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+
+      .card-heading {
+        font-size: 20px;
+        font-weight: 700;
+
+        @include respond(mobile) {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

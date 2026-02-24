@@ -1,0 +1,250 @@
+.services-section {
+  padding: 64px 0;
+
+  .section-sub-title {
+    margin: auto;
+  }
+
+  .heading,
+  .section-sub-title,
+  .sub-heading {
+    margin-bottom: $spacing-md;
+  }
+
+  /* ============================= */
+  /* CARD CONTAINER */
+  /* ============================= */
+
+  .card-container {
+    width: 100%;
+    padding-right: 80px;
+    padding-left: 80px;
+    position: relative;
+    display: flex;
+    gap: $spacing-xl;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    flex-wrap: nowrap;
+    margin-top: $spacing-xxl;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    scrollbar-width: none;
+
+    scroll-snap-type: x mandatory;
+    cursor: grab;
+    user-select: none;
+
+    &.dragging {
+      cursor: grabbing;
+    }
+
+    img,
+    a {
+      user-drag: none;
+      -webkit-user-drag: none;
+    }
+
+    /* ============================= */
+    /* TABLET */
+    /* ============================= */
+
+    @include respond(tablet) {
+      padding-left: 40px;
+      padding-right: 40px;
+      gap: 24px;
+    }
+
+    /* ============================= */
+    /* MOBILE → STACK */
+    /* ============================= */
+
+    @include respond(mobile) {
+      flex-direction: column;
+      overflow-x: hidden;
+      padding-left: 20px;
+      padding-right: 20px;
+      gap: 32px;
+      cursor: default;
+    }
+
+    /* ============================= */
+    /* SERVICE CARD */
+    /* ============================= */
+
+    .service-card {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      flex: 0 0 290px;
+      width: 290px;
+      height: 465px;
+      padding: 24px 0 0;
+      border: 1px solid rgba(10, 35, 66, 0.16);
+      border-radius: $radius-xs;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.35s ease;
+
+      @include respond(tablet) {
+        flex: 0 0 260px;
+        width: 260px;
+        height: 430px;
+      }
+
+      @include respond(mobile) {
+        width: 100%;
+        flex: unset;
+        height: auto;
+      }
+
+      .heading-tag {
+        text-align: left;
+        padding: 0 24px;
+      }
+
+      .heading {
+        text-align: left;
+        font-size: 24px;
+        padding: 0 24px;
+
+        @include respond(mobile) {
+          font-size: 20px;
+        }
+      }
+
+      .service-info {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        line-clamp: 2;
+        -webkit-line-clamp: 3;
+        padding: 0 24px;
+      }
+
+      .service-link {
+        width: fit-content;
+        @include flex-center;
+        margin: 24px 0;
+        padding: 0 24px;
+      }
+
+      .content-container {
+        width: 290px;
+        height: calc(100% - 170px);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include respond(tablet) {
+          width: 260px;
+        }
+
+        @include respond(mobile) {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .img-fake-container {
+        width: 290px;
+        height: 170px;
+
+        @include respond(tablet) {
+          width: 260px;
+        }
+
+        @include respond(mobile) {
+          height: 0;
+        }
+      }
+
+      .img-container {
+        position: absolute;
+        left: 0;
+        top: calc(100% - 170px);
+        width: 290px;
+        height: 170px;
+
+        @include respond(tablet) {
+          width: 260px;
+        }
+
+        @include respond(mobile) {
+          position: relative;
+          top: auto;
+          left: auto;
+          width: 100%;
+          height: 200px;
+        }
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      /* ============================= */
+      /* ACTIVE STATE */
+      /* ============================= */
+
+      &-active {
+        flex: 0 0 585px;
+        width: 585px;
+
+        @include respond(tablet) {
+          flex: 0 0 520px;
+          width: 520px;
+        }
+
+        @include respond(mobile) {
+          width: 100%;
+          flex: unset;
+        }
+
+        .content-container {
+          height: 100%;
+
+          .service-info {
+            display: inline;
+          }
+
+          @include respond(mobile) {
+            height: auto;
+          }
+        }
+
+        .img-fake-container {
+          height: 0;
+
+          @include respond(mobile) {
+            height: auto;
+          }
+        }
+
+        .img-container {
+          left: 50%;
+          top: 0;
+          height: 100%;
+
+          @include respond(mobile) {
+            position: relative;
+            left: auto;
+            top: auto;
+            height: 200px;
+          }
+
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}

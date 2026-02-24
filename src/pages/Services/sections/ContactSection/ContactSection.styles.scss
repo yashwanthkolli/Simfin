@@ -1,0 +1,39 @@
+.aboutus-contact-section {
+  @include section;
+  background: $color-white;
+  color: $color-primary;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  .heading {
+    margin-bottom: $spacing-md;
+  }
+
+  .sub-heading {
+    margin-bottom: $spacing-xl;
+    width: 60%;
+
+    @include respond(tablet) {
+      width: 80%;
+    }
+
+    @include respond(mobile) {
+      width: 100%;
+      font-size: 16px;
+    }
+  }
+
+  /* Ensure CTA spacing behaves nicely */
+  .btn {
+    @include respond(mobile) {
+      width: 100%;
+      max-width: 320px;
+    }
+  }
+
+  .btn--light {
+    color: $color-accent;
+  }
+}

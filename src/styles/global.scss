@@ -1,0 +1,24 @@
+@use './variables';
+@use './mixins';
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('../assets/fonts/Quicksand-VariableFont_wght.woff2') format('woff2');
+  font-style: normal;
+  font-display: swap;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid $color-accent;
+  outline-offset: 2px;
+}
